@@ -1,0 +1,17 @@
+global-exclude *
+recursive-include libCartoSym *
+recursive-exclude libCartoSym obj/**
+recursive-exclude libCartoSym *.o**
+recursive-exclude libCartoSym *.so**
+recursive-exclude libCartoSym images/*
+recursive-exclude libCartoSym libCartoSym.org/*
+recursive-exclude libCartoSym .git**
+recursive-exclude libCartoSym *.geojson**
+recursive-exclude libCartoSym tutorial/**
+recursive-exclude libCartoSym */__pycache__
+recursive-exclude libCartoSym bindings/*/*ecrt**
+recursive-exclude libCartoSym bindings/py/_pyCartoSym.c
+recursive-exclude libCartoSym tests/parsing/output_TestCartoSymParsing/**
+include setup.py
+include pyproject.toml
+include README.md

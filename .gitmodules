@@ -1,0 +1,3 @@
+[submodule "libCartoSym"]
+	path = libCartoSym
+	url = https://github.com/ecere/libCartoSym
