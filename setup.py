@@ -29,7 +29,7 @@ if sys.platform.startswith("win") and sys.version_info[:2] == (3, 6):
    import distutils.cygwinccompiler
    distutils.cygwinccompiler.get_msvcr = lambda: [] # ["msvcr140"] -- we're building with MinGW-w64
 
-pkg_version = '0.0.1'
+pkg_version = '0.0.1post1'
 
 #try:
 #    from wheel.bdist_wheel import bdist_wheel as _bdist_wheel
@@ -270,11 +270,12 @@ else:
    }
    package_data={
       'cartosym': [ 'cscql2.py' ],
-      #'cscql2.bin': ['cs-canif' + exe_ext, 'cs_canif_wrapper.py'],
+      'cscql2.bin': [ ], # 'cs-canif' + exe_ext, 'cs_canif_wrapper.py'],
       'cscql2.lib': [ ], #'libcartosymStatic.a'],
       #'cscql2.examples': ['demo.py'],
    }
    if platform_str == 'win32':
+      packages.append('cscql2.bin')
       package_data['cscql2.bin'].append(dll_prefix + 'CQL2' + dll_ext)
       package_data['cscql2.bin'].append(dll_prefix + 'DE9IM' + dll_ext)
       package_data['cscql2.bin'].append(dll_prefix + 'SFCollections' + dll_ext)
