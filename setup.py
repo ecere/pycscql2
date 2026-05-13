@@ -29,7 +29,7 @@ if sys.platform.startswith("win") and sys.version_info[:2] == (3, 6):
    import distutils.cygwinccompiler
    distutils.cygwinccompiler.get_msvcr = lambda: [] # ["msvcr140"] -- we're building with MinGW-w64
 
-pkg_version = '0.0.1post1'
+pkg_version = '0.0.2rc1'
 
 #try:
 #    from wheel.bdist_wheel import bdist_wheel as _bdist_wheel
